@@ -1,11 +1,25 @@
-var menuIcon = document.querySelector(".menu_icon")
 
+var menuIcon = document.querySelector(".menu_icon")
 var sidebar = document.querySelector(".sidebar")
 var content = document.querySelector(".content")
+var closeBtn = document.querySelector('.close-sidebar');
 
-menuIcon.onclick =function(){
-    sidebar.classList.toggle("small-sidebar")
-    content.classList.toggle("large-content")
+function handleSidebarToggle() {
+    sidebar.classList.toggle("small-sidebar");
+    content.classList.toggle("large-content");
+    // Show/hide close button only on mobile
+    if (window.innerWidth <= 500 && sidebar.classList.contains('small-sidebar')) {
+        closeBtn.style.display = 'block';
+    } else {
+        closeBtn.style.display = 'none';
+    }
+}
+
+menuIcon.onclick = handleSidebarToggle;
+closeBtn.onclick = function() {
+    sidebar.classList.remove("small-sidebar");
+    content.classList.remove("large-content");
+    closeBtn.style.display = 'none';
 }
 
 
