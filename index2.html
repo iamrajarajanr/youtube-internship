@@ -11,8 +11,6 @@
 </head>
 <body>
     <nav class="flex-div">
-
-        
         <div class="nav-left flex-div">
             <img src="images/menu.png" alt="" class="menu_icon">
             <img src="images/youtube.png" alt="" class="logo">
@@ -29,13 +27,13 @@
             <img src="images/upload.png" alt="">
             <img src="images/more.png" alt="">
             <img src="images/notification.png" alt="">
-            <a href="login.html"><img src="images/subimg/" alt="" class="user-icon" ></a>
-                <img src="images/subimg/rajprofile.jpg" alt="" class="user-icon" id="profileBtn">
+            <a href="login.html"><img src="images/subimg/rajprofile.jpg" alt="" class="user-icon" ></a>
         </div>
     </nav>
     <!-- --------------------------sidebar--------------------- -->
     <div class="sidebar" >
-        <div class="shortcut-links">
+    <button class="close-sidebar" style="display:none;position:absolute;top:10px;right:10px;z-index:101;">&times;</button>
+    <div class="shortcut-links">
             <a href=""><img src="images/home.png" alt=""><p>Home</p></a>
             <a href="index.html"><img src="images/explore.png" alt=""><p>Explore</p></a>
             <a href=""><img src="images/subscriprion.png" alt=""><p>Subcriptions</p></a>
@@ -58,9 +56,9 @@
     <!-- --------------------main---------------- -->
 
     <div class="content">
-        <div class="banner">
+        <!-- <div class="banner">
             <img src="images/subimg/banner.png" alt="">
-        </div>
+        </div> -->
 <!-- ------------------------ video------------------------ -->
 <div id="result">
 
@@ -144,7 +142,7 @@
                 <div class="flex-div">
                     <img src="images/subimg/channels4_profile (3).jpg" alt="">
                     <div class="vid-info">
-                         <a href="">🤯 Train Accident😱</a>
+                         <a href="">🤯Train Accident😱</a>
                         <p>Mr.GK</p>
                         <p>190k Views &bull; 2 days</p>
                     </div>
@@ -207,37 +205,5 @@
 
 <script src="videohover.js" ></script>
     <script src="script.js"></script>
-</body>
-
-<!-- Profile Popup -->
-<div id="profilePopup" style="display:none;position:fixed;top:70px;right:30px;z-index:1000;background:#fff;border-radius:10px;box-shadow:0 2px 16px rgba(0,0,0,0.2);width:320px;max-width:90vw;padding:24px 20px 16px 20px;">
-    <div style="display:flex;align-items:center;gap:16px;">
-        <img src="images/subimg/rajprofile.jpg" alt="Profile" style="width:56px;height:56px;border-radius:50%;border:2px solid #eee;">
-        <div>
-            <div style="font-weight:bold;font-size:18px;">Rajarajan</div>
-            <div style="font-size:14px;color:#555;">rajarajanr@gmail.com</div>
-        </div>
-    </div>
-    <hr style="margin:16px 0;">
-    <div style="font-size:16px;margin-bottom:12px;">Manage your Google Account</div>
-    <button id="signOutBtn" style="background:#f1f1f1;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;width:100%;font-size:15px;">Sign out</button>
-    <button id="closeProfilePopup" style="position:absolute;top:8px;right:8px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;">&times;</button>
-</div>
-
-<script>
-// Show popup on profile click
-document.getElementById('profileBtn').onclick = function(e) {
-    e.preventDefault();
-    document.getElementById('profilePopup').style.display = 'block';
-};
-// Close popup
-document.getElementById('closeProfilePopup').onclick = function() {
-    document.getElementById('profilePopup').style.display = 'none';
-};
-// Optional: Sign out button
-document.getElementById('signOutBtn').onclick = function() {
-    window.location.href = 'index.html';
-};
-</script>
 </body>
 </html>
